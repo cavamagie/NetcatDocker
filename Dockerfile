@@ -6,4 +6,4 @@ RUN yum -y install tcpdump && yum clean all
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "while true; do nc -l -p 8080 -e /bin/cat; done"]
+CMD ["sh", "-c", "while true; do nc -l -p 8080 -e /bin/cat > file.txt; done"]
